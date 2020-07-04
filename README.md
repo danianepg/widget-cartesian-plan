@@ -60,6 +60,7 @@ They are unit and integration tests that coverage 92,1% of the application for b
 ### Complications Implemented
 
 **Pagination**
+
 To define paging and sorting parameters, inform on the URL the parameters
 
  - page: page number starting from 0. 
@@ -71,6 +72,7 @@ Retrieve the **second page** of records with **two records** per page, ordered b
 [http://localhost:8080/api/widgets?size=2&page=1&sort=z,desc](http://localhost:8080/api/widgets?size=2&page=1&sort=z,desc)
 
 **Filtering**
+
 Filter by widgets present in a certain area through the endpoint  [http://localhost:8080/api/widgets/filter?lowerX={lowerX}&lowerY={lowerY}&upperX={upperX}&upperY={upperY}](http://localhost:8080/api/widgets/filter?lowerX={lowerX}&lowerY={lowerY}&upperX={upperX}&upperY={upperY}).
 
 Example: 
@@ -81,6 +83,7 @@ Pagination can also be applied to filtered results.
 
 
 **SQL Database**
+
 H2 was chosen as SQL database to storage. All methods to save, update, delete, filter, paging and sorting were delegated to Spring. The database storage is activated through Spring Profiles when informed the profile ```db```.
 
 Connect to [H2 console](http://localhost:8080/h2-console) to view the database. Use the parameters below:
